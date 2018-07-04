@@ -1,6 +1,7 @@
 pipeline{
        agent none        
                     stages{
+                           def anil= 'M4'
                    
                stage('fromgit')
                     {
@@ -10,7 +11,7 @@ pipeline{
                            }
                   steps{
                         git 'https://github.com/Nikhilcv/hello.git'
-                         withEnv(["PATH+MAVEN=${tool 'M4'}/bin"]){
+                         withEnv(["PATH+MAVEN=${anil}/bin"]){
                          sh 'mvn clean package'
                         sh 'scp /home/nikhil/jenkins/workspace/hello/target/webapp.war root@192.168.7.138:/home/nikhil/softs/tomcat7/webapps'
                                }
