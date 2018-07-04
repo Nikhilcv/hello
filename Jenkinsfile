@@ -1,14 +1,12 @@
 pipeline{
-       agent none        
+       agent all       
                     stages{
                            
                    
                stage('fromgit')
                     {
                            def anil = 'M4'
-                           agent{
-                           label "slave"
-                           }
+                         
                   steps{
                         git 'https://github.com/Nikhilcv/hello.git'
                          withEnv(["PATH+MAVEN=${anil}/bin"]){
