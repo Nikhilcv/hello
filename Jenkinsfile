@@ -1,6 +1,5 @@
 pipeline{
        agent none
-       def PATH
        environment{
               M2_HOME='/home/nikhil/softwares/maven3.5'
               
