@@ -3,6 +3,7 @@ pipeline{
              stages{
                     agent{
                            label "master"
+                    }
                stage('fromgit')
                     {
                   steps{
