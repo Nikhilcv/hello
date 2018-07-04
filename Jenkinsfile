@@ -1,11 +1,12 @@
 pipeline{
        agent none
              stages{
-                    agent{
-                           label "master"
-                    }
+                    
                stage('fromgit')
                     {
+                           agent{
+                           label "master"
+                           }
                   steps{
                         git 'https://github.com/Nikhilcv/hello.git'
                         sh 'mvn clean package'
