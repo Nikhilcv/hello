@@ -1,5 +1,5 @@
 pipeline{
-       agents none
+       agents any
              stages{
                stage('fromgit')
                     {
