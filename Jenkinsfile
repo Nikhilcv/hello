@@ -1,6 +1,8 @@
 pipeline{
-       agent any
+       agent none
              stages{
+                    agent{
+                           label "master"
                stage('fromgit')
                     {
                   steps{
