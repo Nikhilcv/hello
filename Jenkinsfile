@@ -1,10 +1,10 @@
 pipeline{
        agent none        
                     stages{
-                    
+                    def mvn_version = 'M4'
                stage('fromgit')
                     {
-                           def mvn_version = 'M4'
+                           
                            agent{
                            label "slave"
                            }
