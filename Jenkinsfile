@@ -12,7 +12,7 @@ pipeline{
                            }
                   steps{
                         git 'https://github.com/Nikhilcv/hello.git'
-                        sh 'export $M2_HOME'
+                        sh 'export M2_HOME=$M2_HOME'
                          sh 'mvn clean package'
                         sh 'scp /home/nikhil/jenkins/workspace/hello/target/webapp.war root@192.168.7.138:/home/nikhil/softs/tomcat7/webapps'
                                }
