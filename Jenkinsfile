@@ -1,7 +1,8 @@
 pipeline{
+        def mvn_version = 'M4'
        agent none        
                     stages{
-                    def mvn_version = 'M4'
+                   
                stage('fromgit')
                     {
                            
