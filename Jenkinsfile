@@ -1,11 +1,11 @@
 pipeline{
        agent none        
                     stages{
-                           def anil = 'M4'
+                           
                    
                stage('fromgit')
                     {
-                           
+                           def anil = 'M4'
                            agent{
                            label "slave"
                            }
