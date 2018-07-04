@@ -5,7 +5,7 @@ pipeline{
                    
                stage('fromgit')
                     {
-                           def anil = 'M4'
+                           //def anil = 'M4'
                            agent{
                            label "slave"
                            }
