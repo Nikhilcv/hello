@@ -1,11 +1,13 @@
 pipeline{
-       agent all       
+       agent none       
                     stages{
                            
                    
                stage('fromgit')
                     {
-                           def anil = 'M4'
+                          // def anil = 'M4'
+                           agent{
+                                  label = "slave"  
                          
                   steps{
                         git 'https://github.com/Nikhilcv/hello.git'
