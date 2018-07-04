@@ -1,7 +1,7 @@
 pipeline{
        agent none        
                     stages{
-                           def anil= 'M4'
+                           def anil = 'M4'
                    
                stage('fromgit')
                     {
