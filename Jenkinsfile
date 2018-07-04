@@ -1,7 +1,9 @@
 pipeline{
        agent none
+       def PATH
        environment{
               M2_HOME='/home/nikhil/softwares/maven3.5'
+              
        }
                     stages{
                     
@@ -13,6 +15,7 @@ pipeline{
                   steps{
                         git 'https://github.com/Nikhilcv/hello.git'
                         sh 'export M2_HOME=$M2_HOME'
+                         sh 'export PATH=$PATH:/home/nikhil/softwares/maven3.5/bin'
                          sh 'printenv'
                          sh 'mvn clean package'
                         sh 'scp /home/nikhil/jenkins/workspace/hello/target/webapp.war root@192.168.7.138:/home/nikhil/softs/tomcat7/webapps'
